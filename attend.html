@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=a, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <title>لوحة تحكم</title>
+</head>
+      <style>
+        body {
+          margin: 0;
+          font-family: "Lato", sans-serif;
+        }
+        #bt{
+            margin-left: 20px;
+        }
+        
+        .sidebar {
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+          position: fixed;
+          height: 100%;
+          overflow: auto;
+        }
+        #tab{
+          margin-left: 0;
+          margin-right: 70px;
+          direction: rtl;
+        }
+        
+        .sidebar a {
+          display: block;
+          color: black;
+          padding: 16px;
+          text-decoration: none;
+        }
+         
+        .sidebar a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+        
+        .sidebar a:hover:not(.active) {
+          background-color: #555;
+          color: white;
+        }
+      
+
+          
+        div.content {
+          margin-left: 200px;
+          padding: 1px 16px;
+          height: 1000px;
+        }
+        
+        @media screen and (max-width: 700px) {
+          .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+          .sidebar a {float: left;}
+          div.content {margin-left: 0;}
+        }
+        
+        @media screen and (max-width: 400px) {
+          .sidebar a {
+            text-align: center;
+            float: none;
+          }
+        }
+        </style>
+        </head>
+        <body>
+          <nav class="navbar fixed-top bg-body-tertiary">
+            <div class="container-fluid">
+               
+            <div class="d-flex align-items-center me-auto gap-3">
+              
+              <div class="dropdown">
+              <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img  src="img/usr.png" alt="profile" class="rounded-circle" width="35" height="35">
+              
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">البروفايل</a></li>
+                  <li><a class="dropdown-item" href="#"> الاعدادات</a></li>
+                  <li><a class="dropdown-item" href="#"> تسجيل خروج </a></li>
+                </ul>
+              </div>
+              
+              <button class="btn position-relative me-3">
+             <i class="bi bi-bell"></i>
+             <span class="position-absolute translate-middle badge badge-number rounded-pill bg-primary p-2">0</span>
+            </button>
+           
+          
+            </div>
+            <div class="me-auto">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 p-0" type="search" placeholder="بحث" aria-label="Search">
+              
+              <button class="btn btn-outline-success d-flex justify-content-between" type="submit">Search</button>
+            </form>
+          </div>
+
+            <a class="navbar-brand  ms-2 position-relative align-items-center  ms-2 " href="#" dir="rtl">Mohammed</a> 
+          
+          </nav>
+          <br>
+        <div class="container-fluide mt-5">
+          
+        <div dir="rtl">
+        <div class="sidebar">
+          <a class="active" href="#home">  لوحة تحكم </a>
+          <a href="index.html"><i class="bi bi-house-door-fill" dir="rtl"></i> الرئيسية</a>
+          <a href="sidebar.html"><i class="bi bi-people-fill"></i> الطلاب</a>
+          <a href="attend.html"><i class="bi bi-person-check-fill"></i>  الحضور</a>
+          <a href="items.html"><i class="bi bi-journal-bookmark-fill "></i> المواد</a>
+          <a href="dgree.html"><i class="bi bi-file-earmark-plus"></i>  الدرجات</a>
+          <a href="setting.html"><i class="bi bi-gear"></i>  الاعدادات</a>
+        </div>
+        </div> 
+        <div class="container" id="tab">
+            <h2 class="mb-4">سجل الحضور</h2>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">اختر التاريخ</label>
+                <input type="date" id="date" class="form-control">
+            </div>
+       
+        <!--Staff List-->
+						<table class="table table-bordered border-secondary table-striped table-hover table-head-fixed text-right mt-3" dir="auto">
+							
+								<tr>
+									<th>اسم الطالب</th>
+									<th>الرقم الجامعي</th>
+									<th>الفصل الدراسي</th>
+									<th>الحالة</th>
+								</tr>
+                                    <tr>
+                                        <td>محمد</td>
+                                        <td>555</td>
+                                        <td>الثاني</td>
+                                
+                                        <td>
+                                            <select class="form-select">
+                                                <option  disabled selected>اختر</option>   
+                                                <option>حاضر</option>
+                                                <option>غائب</option>
+                                            </select>
+											
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                
+                                        <td>
+                                            <select class="form-select">
+                                                <option  disabled selected>اختر</option>   
+                                                <option>حاضر</option>
+                                                <option>غائب</option>
+                                            </select>
+											
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                
+                                        <td>
+                                            <select class="form-select">
+                                                <option  disabled selected>اختر</option>   
+                                                <option>حاضر</option>
+                                                <option>غائب</option>
+                                            </select>
+											
+										</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                
+                                        <td>
+                                            <select class="form-select">
+                                                <option  disabled selected>اختر</option>   
+                                                <option>حاضر</option>
+                                                <option>غائب</option>
+                                            </select>
+											
+										</td>
+                                    </tr>
+                            </table>
+                            <button  class='btn rounded btn-sm btn-primary'>حفظ الحضور</button>
+                            
+                            
+                            </div>
+
+                            
+        <!-- <section class="section" id="info_area" dir="auto">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body table-responsive pt-4">
+                            <div class="row">
+                                <div class="col-sm col-md-2 col-lg-2 mb-3">
+                                    <label class="form-label">الاسم</label>
+                                    <input class="form-control" @keyup="current_page = 1" v-model="search_name" />
+                                </div>	
+                                <div class="col-sm col-md-2 col-lg-2 mb-3">
+                                    <label class="form-label">البريد الإلكتروني</label>
+                                    <input class="form-control" @keyup="current_page = 1" v-model="search_email" />
+                                </div>
+                                <div class="col-sm col-md-2 col-lg-2 mb-3">
+                                    <label class="form-label">رقم الجوال</label>
+                                    <input class="form-control" @keyup="current_page = 1" v-model="search_phone" /> 
+                                </div>
+                                <div class="col-sm col-md-2 col-lg-2 mb-3">
+                                    <label class="form-label">نوع الصلاحية</label>
+                                    <select class="form-select" v-model="search_per" aria-label="نوع الصلاحية">
+                                        <option value=""></option>
+                                        <option v-for="(x ,index) in perm_list" :value="x.ID"></option>
+                                    </select>
+                                </div>   -->
+       
+        <!-- <div class="container mt-4">
+            <div class="row g-3">
+                <div class="col-md-3 align-items-center">
+                    <div class="card text-white bg-light shadow align-items-center">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div ><h5 class="card-title text-dark"> المواد الدراسية</h5>
+                                    <p class="text-dark">عدد المواد 20</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 align-items-center">
+                    <div class="card text-white bg-light shadow align-items-center">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                            
+                                <div ><h5 class="card-title text-dark">إدارة الحضور </h5>
+                                    <p class="text-dark">عدد الحضور</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-3 align-items-center">
+                <div class="card text-white bg-light shadow align-items-center">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div ><h5 class="card-title text-dark">إدارة الطلاب</h5>
+                                <p class="text-dark">عدد الطلاب</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        
+        <div class="container mt-4">
+            <div class="row g-3">
+                <div class="col-md-3 align-items-center">
+                    <div class="card text-white bg-light shadow align-items-center">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div ><h5 class="card-title text-dark">الدرجات </h5>
+                                    <p class="text-dark">الدرجات</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 align-items-center">
+                    <div class="card text-white bg-light shadow align-items-center">
+                        <div class="card-body ">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div ><h5 class="card-title text-dark"> التقارير</h5>
+                                <p class="text-dark">تقرير</p>
+                                </div>
+                            </div>
+                        </div> -->
+</body>
+</html>
